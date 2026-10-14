@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental 1 | Class 11 – Work/Life Balance</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        h1, h2, h3, h4, h5, .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-nunito { font-family: 'Nunito', sans-serif; }
+        
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-out forwards; }
+        
+        .correct-highlight { background-color: #dcfce7 !important; border-color: #22c55e !important; color: #166534 !important;}
+        .wrong-highlight { background-color: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b !important;}
+        
+        .toast { position: fixed; bottom: 20px; right: 20px; padding: 15px 25px; border-radius: 8px; color: white; font-weight: bold; opacity: 0; transition: opacity 0.3s, transform 0.3s; transform: translateY(20px); pointer-events: none; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .toast.show { opacity: 1; transform: translateY(0); }
+        .toast-success { background-color: #10b981; }
+        .toast-error { background-color: #ef4444; }
+
+        .transition-box { background: linear-gradient(135deg, #eef2ff, #e0e7ff); border-left: 4px solid #6366f1; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+        .transition-box h4 { color: #3730a3; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .transition-box p { color: #334155; font-size: 0.95rem; line-height: 1.6; font-family: 'Nunito', sans-serif;}
+        
+        .instruction-box { background: #fff7ed; border-left: 4px solid #f97316; border-radius: 12px; padding: 16px 20px; margin-bottom: 20px; }
+        .instruction-box h4 { color: #9a3412; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .instruction-box p, .instruction-box ol { color: #334155; font-size: 0.88rem; line-height: 1.7; }
+        .instruction-box ol { padding-left: 20px; list-style-type: decimal; }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Reading & Video Blocks */
+        .transcript-box { background-color: #f8fafc; padding: 1.5rem; border-left: 4px solid #4f46e5; border-radius: 8px; font-family: 'Nunito', serif; font-size: 1.05rem; line-height: 1.8; color: #334155; margin-bottom: 1.5rem;}
+        .speaker { font-weight: 800; color: #4f46e5; font-family: 'Inter', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;}
+
+        @media print {
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="bg-slate-900 text-white shadow-2xl relative overflow-hidden border-b-4 border-amber-500 no-print">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-amber-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-y-1/3 -translate-x-1/4"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 py-8 relative z-10">
+            <div class="mb-6">
+                <img src="https://www.colomboamericano.edu.co/wp-content/uploads/2024/06/Logo-Colombo-Horizontal.png" alt="Colombo Americano Logo" class="h-10 md:h-12 bg-white/95 p-2 rounded-lg shadow-sm">
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div class="flex items-center gap-5">
+                    <div class="h-16 w-16 md:h-20 md:w-20 bg-white rounded-2xl p-2 shadow-lg flex items-center justify-center text-4xl">
+                        ⚖️
+                    </div>
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2 flex items-center font-poppins">
+                            Fundamental 1
+                        </h1>
+                        <p class="text-slate-300 text-sm md:text-base font-medium tracking-wide uppercase">Class 11 <span class="text-amber-400 mx-2">•</span> Work/Life Balance</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 p-5 rounded-2xl backdrop-blur-md border border-white/10 shadow-xl max-w-md w-full md:w-auto">
+                    <h2 class="text-xl font-bold text-amber-300 mb-3 border-b border-white/20 pb-2">🎯 Today's Mission</h2>
+                    <ul class="text-sm text-slate-100 space-y-2">
+                        <li class="flex items-start"><i class="fa-solid fa-check-circle text-amber-400 mt-1 mr-2"></i> <strong>Categorize</strong> daily activities to analyze your lifestyle.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check-circle text-amber-400 mt-1 mr-2"></i> <strong>Discuss</strong> how to balance work, family, and free time.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check-circle text-amber-400 mt-1 mr-2"></i> <strong>Read</strong> about an inspiring business owner in Iraq.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check-circle text-amber-400 mt-1 mr-2"></i> <strong>Master</strong> the rules for using Articles (A, An, No Article).</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check-circle text-amber-400 mt-1 mr-2"></i> <strong>Speak</strong> in groups to guess famous identities.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-200 no-print">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex space-x-2 overflow-x-auto py-3 no-scrollbar" id="tab-container">
+                <button onclick="switchTab('tab-warmup')" id="btn-tab-warmup" class="px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 bg-slate-800 text-white shadow-md whitespace-nowrap">
+                    1. ⚖️ The Balance
+                </button>
+                <button onclick="switchTab('tab-video')" id="btn-tab-video" class="px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-500 hover:bg-slate-100 whitespace-nowrap">
+                    2. 📺 The Vlog
+                </button>
+                <button onclick="switchTab('tab-reading')" id="btn-tab-reading" class="px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-500 hover:bg-slate-100 whitespace-nowrap">
+                    3. 📖 Reading
+                </button>
+                <button onclick="switchTab('tab-grammar')" id="btn-tab-grammar" class="px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-500 hover:bg-slate-100 whitespace-nowrap">
+                    4. ⚙️ Grammar
+                </button>
+                <button onclick="switchTab('tab-speaking')" id="btn-tab-speaking" class="px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-500 hover:bg-slate-100 whitespace-nowrap">
+                    5. 🗣️ Speaking
+                </button>
+                <button onclick="switchTab('tab-wrapup')" id="btn-tab-wrapup" class="px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-500 hover:bg-slate-100 whitespace-nowrap">
+                    6. 🎮 Wrap-up
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+        <!-- ========================================== -->
+        <!-- TAB 1: WARM UP (WORK/LIFE BALANCE)         -->
+        <!-- ========================================== -->
+        <section id="tab-warmup" class="tab-content active no-print">
+            <div class="transition-box border-l-amber-500 bg-amber-50">
+                <h4 class="text-amber-800"><i class="fa-solid fa-scale-balanced"></i> Welcome to Unit 2!</h4>
+                <p>Today we are starting a brand new unit: <strong>Work/Life Balance</strong>. Think about your typical week. Do you spend more time working, or more time relaxing? Let's analyze common daily habits before we look at our own lives.</p>
+            </div>
+
+            <!-- Part 1: Sorter Game -->
+            <div class="instruction-box">
+                <h4><i class="fa-solid fa-gamepad"></i> Part 1: The Life Sorter</h4>
+                <ol>
+                    <li>Read the activity on the main card.</li>
+                    <li>Where does this activity belong? Click <strong>Work/Study</strong>, <strong>Family & Friends</strong>, or <strong>"Me" Time</strong>.</li>
+                    <li>Sort all 15 activities to unlock Part 2!</li>
+                </ol>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 mb-10 text-center relative overflow-hidden" id="sorter-container">
+                <div class="bg-slate-100 p-8 rounded-2xl mb-6 flex flex-col items-center justify-center min-h-[160px] border-2 border-dashed border-slate-300 relative transition-all" id="sorter-card">
+                    <span id="sort-counter" class="absolute top-3 right-4 text-xs font-bold text-slate-400 bg-white px-2 py-1 rounded-full shadow-sm">1 / 15</span>
+                    <h3 id="sort-word" class="text-2xl md:text-3xl font-black text-indigo-900 font-poppins">Do English homework</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center" id="sorter-buttons">
+                    <button onclick="checkSort('work')" class="px-6 py-4 bg-blue-50 hover:bg-blue-100 text-blue-700 border-2 border-blue-200 font-black rounded-xl text-lg transition shadow-sm flex flex-col items-center gap-2">
+                        <i class="fa-solid fa-briefcase text-2xl"></i> WORK / STUDY
+                    </button>
+                    <button onclick="checkSort('family')" class="px-6 py-4 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border-2 border-emerald-200 font-black rounded-xl text-lg transition shadow-sm flex flex-col items-center gap-2">
+                        <i class="fa-solid fa-users text-2xl"></i> FAMILY / FRIENDS
+                    </button>
+                    <button onclick="checkSort('me')" class="px-6 py-4 bg-purple-50 hover:bg-purple-100 text-purple-700 border-2 border-purple-200 font-black rounded-xl text-lg transition shadow-sm flex flex-col items-center gap-2">
+                        <i class="fa-solid fa-headphones text-2xl"></i> "ME" TIME
+                    </button>
+                </div>
+            </div>
+
+            <!-- Part 2: Production & Sharing -->
+            <div class="instruction-box border-l-emerald-500 bg-emerald-50 hidden" id="production-phase">
+                <h4 class="text-emerald-800"><i class="fa-solid fa-pen-to-square"></i> Part 2: Your Weekly Schedule</h4>
+                <p>Now it is your turn. Think about your own week. Type activities that YOU do in each category. Then, work with a partner in a breakout room and share your schedules.</p>
+                
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-4 rounded-xl border-2 border-blue-200 shadow-sm">
+                        <h5 class="font-black text-blue-700 mb-3 uppercase tracking-wider text-sm border-b border-blue-100 pb-2"><i class="fa-solid fa-briefcase"></i> Work/Study</h5>
+                        <textarea class="w-full bg-blue-50/50 border border-blue-200 rounded p-2 text-sm outline-none focus:border-blue-500 min-h-[100px] resize-none" placeholder="e.g., I check emails, I attend university classes..."></textarea>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border-2 border-emerald-200 shadow-sm">
+                        <h5 class="font-black text-emerald-700 mb-3 uppercase tracking-wider text-sm border-b border-emerald-100 pb-2"><i class="fa-solid fa-users"></i> Family/Friends</h5>
+                        <textarea class="w-full bg-emerald-50/50 border border-emerald-200 rounded p-2 text-sm outline-none focus:border-emerald-500 min-h-[100px] resize-none" placeholder="e.g., I visit my parents, I play soccer with friends..."></textarea>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border-2 border-purple-200 shadow-sm">
+                        <h5 class="font-black text-purple-700 mb-3 uppercase tracking-wider text-sm border-b border-purple-100 pb-2"><i class="fa-solid fa-headphones"></i> "Me" Time</h5>
+                        <textarea class="w-full bg-purple-50/50 border border-purple-200 rounded p-2 text-sm outline-none focus:border-purple-500 min-h-[100px] resize-none" placeholder="e.g., I read books, I sleep late on Sundays..."></textarea>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-emerald-100 text-emerald-800 p-4 rounded-lg font-bold text-center">
+                    🗣️ Share with your partner: <em class="font-normal text-emerald-900">"In my week, I spend a lot of time on Work. For example, I..."</em>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                 <button onclick="switchTab('tab-video')" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg transform hover:-translate-y-1">Next: The Vlog 📺 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 2: THE VLOG                            -->
+        <!-- ========================================== -->
+        <section id="tab-video" class="tab-content no-print">
+            <div class="transition-box border-l-blue-500 bg-blue-50">
+                <h4 class="text-blue-800"><i class="fa-solid fa-video"></i> How do they balance it?</h4>
+                <p>We just talked about our own schedules. Now, let's see how two vloggers handle theirs. Max and Amy have very different lives. Let's read their transcript.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+                <div class="lg:col-span-5">
+                    <div class="instruction-box">
+                        <h4><i class="fa-solid fa-book-open"></i> Activity 1: Read the Vlog</h4>
+                        <p>Read the conversation between Max and Amy.</p>
+                    </div>
+                    
+                    <div class="transcript-box shadow-sm">
+                        <div class="mb-3"><span class="speaker">Max:</span> Welcome to the Speak Your Mind Vlog. I'm Max.</div>
+                        <div class="mb-3"><span class="speaker">Amy:</span> ... and I'm Amy, and we want you to speak your mind. Today we're talking about work and life balance.</div>
+                        <div class="mb-3"><span class="speaker">Max:</span> Is it really possible?</div>
+                        <div class="mb-3"><span class="speaker">Amy:</span> For me it's possible, but it's not easy. I go to school full-time, and I work part-time. And I want to spend some time with my family and friends on the weekend.</div>
+                        <div class="mb-3"><span class="speaker">Max:</span> Yeah, I know how that is. A lot of people work long hours and weekends too, like doctors, pilots or journalists. It's hard to make time for hobbies or even a vacation!</div>
+                        <div class="mb-3"><span class="speaker">Max:</span> ... but I'm lucky. I have a job with the same hours every week, nine to five. On the weekends, I hang out with my friends, go to the movies, or play sports. It's not really hard for me to balance my life.</div>
+                        <div class="mb-3"><span class="speaker">Amy:</span> I have a busy life and crazy hours. I need 30 hours in my day to do everything. I have 20 hours of class each week, another 20 hours of work, there's a family picnic on Sunday, and my photography club on Saturday. I love photography!</div>
+                        <div class="mb-3"><span class="speaker">Max:</span> Well, I'm glad, but we need to get you to relax a little bit, ok? It's important to work hard and have time for fun, but we all need balance.</div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="instruction-box">
+                        <h4><i class="fa-solid fa-list-check"></i> Activity 2: True or False?</h4>
+                        <p>Based on the reading, complete the 10 statements below.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <div class="space-y-4" id="video-mcq-container">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100" id="v-mcq-1">
+                                <span class="font-medium text-slate-700 text-sm flex-grow">1. Max and Amy are talking about their favorite vacations.</span>
+                                <div class="flex gap-2 shrink-0">
+                                    <button onclick="checkMCQ('v-mcq-1', 0, 1)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">True</button>
+                                    <button onclick="checkMCQ('v-mcq-1', 1, 1)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">False</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100" id="v-mcq-2">
+                                <span class="font-medium text-slate-700 text-sm flex-grow">2. Amy goes to school full-time and works part-time.</span>
+                                <div class="flex gap-2 shrink-0">
+                                    <button onclick="checkMCQ('v-mcq-2', 0, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">True</button>
+                                    <button onclick="checkMCQ('v-mcq-2', 1, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">False</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100" id="v-mcq-3">
+                                <span class="font-medium text-slate-700 text-sm flex-grow">3. Max says journalists usually work very short hours.</span>
+                                <div class="flex gap-2 shrink-0">
+                                    <button onclick="checkMCQ('v-mcq-3', 0, 1)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">True</button>
+                                    <button onclick="checkMCQ('v-mcq-3', 1, 1)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">False</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100" id="v-mcq-4">
+                                <span class="font-medium text-slate-700 text-sm flex-grow">4. Max has a job with the same hours every week (nine to five).</span>
+                                <div class="flex gap-2 shrink-0">
+                                    <button onclick="checkMCQ('v-mcq-4', 0, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">True</button>
+                                    <button onclick="checkMCQ('v-mcq-4', 1, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">False</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100" id="v-mcq-5">
+                                <span class="font-medium text-slate-700 text-sm flex-grow">5. Max thinks it is very hard to balance his life.</span>
+                                <div class="flex gap-2 shrink-0">
+                                    <button onclick="checkMCQ('v-mcq-5', 0, 1)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">True</button>
+                                    <button onclick="checkMCQ('v-mcq-5', 1, 1)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">False</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100" id="v-mcq-6">
+                                <span class="font-medium text-slate-700 text-sm flex-grow">6. Amy has 20 hours of class and 20 hours of work each week.</span>
+                                <div class="flex gap-2 shrink-0">
+                                    <button onclick="checkMCQ('v-mcq-6', 0, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">True</button>
+                                    <button onclick="checkMCQ('v-mcq-6', 1, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">False</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100" id="v-mcq-7">
+                                <span class="font-medium text-slate-700 text-sm flex-grow">7. Amy has a family picnic on Saturday and photography on Sunday.</span>
+                                <div class="flex gap-2 shrink-0">
+                                    <button onclick="checkMCQ('v-mcq-7', 0, 1)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">True</button>
+                                    <button onclick="checkMCQ('v-mcq-7', 1, 1)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">False</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100" id="v-mcq-8">
+                                <span class="font-medium text-slate-700 text-sm flex-grow">8. Max tells Amy she needs to relax a little bit.</span>
+                                <div class="flex gap-2 shrink-0">
+                                    <button onclick="checkMCQ('v-mcq-8', 0, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">True</button>
+                                    <button onclick="checkMCQ('v-mcq-8', 1, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">False</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100" id="v-mcq-9">
+                                <span class="font-medium text-slate-700 text-sm flex-grow">9. Amy wants to spend time with her family and friends on the weekend.</span>
+                                <div class="flex gap-2 shrink-0">
+                                    <button onclick="checkMCQ('v-mcq-9', 0, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">True</button>
+                                    <button onclick="checkMCQ('v-mcq-9', 1, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">False</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100" id="v-mcq-10">
+                                <span class="font-medium text-slate-700 text-sm flex-grow">10. They both agree that having balance is very important.</span>
+                                <div class="flex gap-2 shrink-0">
+                                    <button onclick="checkMCQ('v-mcq-10', 0, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">True</button>
+                                    <button onclick="checkMCQ('v-mcq-10', 1, 0)" class="w-16 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-sm transition">False</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Follow-up Activity -->
+            <div class="instruction-box border-l-purple-500 bg-purple-50">
+                <h4 class="text-purple-800"><i class="fa-solid fa-comments"></i> Activity 3: Speak Your Mind!</h4>
+                <p>Discuss these questions with your partner in English:</p>
+                <ul class="mt-2 space-y-2 font-medium text-slate-700">
+                    <li>1. Are you like Max (lucky, same hours) or like Amy (crazy hours)?</li>
+                    <li>2. Do you have time for hobbies on the weekend? What are they?</li>
+                    <li>3. In your opinion, is it possible to have a perfect work/life balance?</li>
+                </ul>
+            </div>
+
+            <div class="text-center mt-10">
+                 <button onclick="switchTab('tab-reading')" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg transform hover:-translate-y-1">Next: Reading & Vocab 📖 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 3: READING & VOCAB                     -->
+        <!-- ========================================== -->
+        <section id="tab-reading" class="tab-content no-print">
+            <div class="transition-box border-l-emerald-500 bg-emerald-50">
+                <h4 class="text-emerald-800"><i class="fa-solid fa-newspaper"></i> Business & Balance</h4>
+                <p>Max and Amy are employees and students. But what about a <strong>Business Owner</strong>? Is it harder to balance life when you own the company? Let's read about a woman in Iraq who built her company from scratch.</p>
+            </div>
+
+            <!-- Pre-Reading -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8 flex flex-col md:flex-row items-center gap-6">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl shrink-0"><i class="fa-solid fa-lightbulb"></i></div>
+                <div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Activity 1: Before you read</h3>
+                    <p class="text-sm text-slate-600">The article is about a woman who makes "eco-friendly soap and shampoo." What are some famous businesses or products from your city or country? Discuss quickly with the class!</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-10">
+                <div class="lg:col-span-5">
+                    <div class="instruction-box">
+                        <h4><i class="fa-solid fa-newspaper"></i> Activity 2: A Woman at Work</h4>
+                        <p>Read the article about Zinah Saleh.</p>
+                    </div>
+                    
+                    <div class="transcript-box shadow-sm text-base">
+                        <p class="mb-4"><strong>Zinah Saleh</strong> is a <strong>business owner</strong> with a successful business. She is the owner of her company, Ishtar Handmade Soap. Her company makes eco-friendly soap and shampoo.</p>
+                        <p class="mb-4">The all-natural soap <strong>products</strong> are very popular. All of the products use olive oil from Iraq. They also use fruit from trees in Africa.</p>
+                        <p class="mb-4">Female business owners are unusual in Iraq. Zinah has a degree in business administration, and she wants to help women find jobs. Zinah's <strong>employees</strong> are all women. There are female soap makers, <strong>administrators</strong>, and <strong>marketers</strong>.</p>
+                        <p>Zinah's parents are happy for her. Her father is an engineer and her mother is a homemaker. Zinah thinks working women are important for her country's economy.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="instruction-box">
+                        <h4><i class="fa-solid fa-clipboard-question"></i> Activity 3: Reading Comprehension</h4>
+                        <p>Answer these 10 questions about the text.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <div class="space-y-4" id="r-mcq-container">
+                            <!-- Q1 -->
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100" id="rmcq-1">
+                                <p class="font-medium text-slate-800 text-sm mb-2">1. Where is Zinah Saleh from?</p>
+                                <div class="flex gap-2">
+                                    <button onclick="checkMCQ('rmcq-1', 0, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Egypt</button>
+                                    <button onclick="checkMCQ('rmcq-1', 1, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Iraq</button>
+                                    <button onclick="checkMCQ('rmcq-1', 2, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Africa</button>
+                                </div>
+                            </div>
+                            <!-- Q2 -->
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100" id="rmcq-2">
+                                <p class="font-medium text-slate-800 text-sm mb-2">2. What is the name of Zinah's company?</p>
+                                <div class="flex gap-2">
+                                    <button onclick="checkMCQ('rmcq-2', 0, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Iraq Natural Soaps</button>
+                                    <button onclick="checkMCQ('rmcq-2', 1, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Ishtar Handmade Soap</button>
+                                </div>
+                            </div>
+                            <!-- Q3 -->
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100" id="rmcq-3">
+                                <p class="font-medium text-slate-800 text-sm mb-2">3. Ishtar products use olive oil from Africa.</p>
+                                <div class="flex gap-2">
+                                    <button onclick="checkMCQ('rmcq-3', 0, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">True</button>
+                                    <button onclick="checkMCQ('rmcq-3', 1, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">False</button>
+                                </div>
+                            </div>
+                            <!-- Q4 -->
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100" id="rmcq-4">
+                                <p class="font-medium text-slate-800 text-sm mb-2">4. What kind of degree does Zinah have?</p>
+                                <div class="flex gap-2">
+                                    <button onclick="checkMCQ('rmcq-4', 0, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Engineering</button>
+                                    <button onclick="checkMCQ('rmcq-4', 1, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Business Administration</button>
+                                </div>
+                            </div>
+                            <!-- Q5 -->
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100" id="rmcq-5">
+                                <p class="font-medium text-slate-800 text-sm mb-2">5. It is very common to see female business owners in Iraq.</p>
+                                <div class="flex gap-2">
+                                    <button onclick="checkMCQ('rmcq-5', 0, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">True</button>
+                                    <button onclick="checkMCQ('rmcq-5', 1, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">False</button>
+                                </div>
+                            </div>
+                            <!-- Q6 -->
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100" id="rmcq-6">
+                                <p class="font-medium text-slate-800 text-sm mb-2">6. Who works for Zinah's company?</p>
+                                <div class="flex gap-2">
+                                    <button onclick="checkMCQ('rmcq-6', 0, 2)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Only men</button>
+                                    <button onclick="checkMCQ('rmcq-6', 1, 2)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Men and women</button>
+                                    <button onclick="checkMCQ('rmcq-6', 2, 2)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Only women</button>
+                                </div>
+                            </div>
+                            <!-- Q7 -->
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100" id="rmcq-7">
+                                <p class="font-medium text-slate-800 text-sm mb-2">7. What is Zinah's father's profession?</p>
+                                <div class="flex gap-2">
+                                    <button onclick="checkMCQ('rmcq-7', 0, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Business owner</button>
+                                    <button onclick="checkMCQ('rmcq-7', 1, 1)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Engineer</button>
+                                </div>
+                            </div>
+                            <!-- Q8 -->
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100" id="rmcq-8">
+                                <p class="font-medium text-slate-800 text-sm mb-2">8. What is Zinah's mother's profession?</p>
+                                <div class="flex gap-2">
+                                    <button onclick="checkMCQ('rmcq-8', 0, 0)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Homemaker</button>
+                                    <button onclick="checkMCQ('rmcq-8', 1, 0)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Soap maker</button>
+                                </div>
+                            </div>
+                            <!-- Q9 -->
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100" id="rmcq-9">
+                                <p class="font-medium text-slate-800 text-sm mb-2">9. Are Zinah's parents happy for her?</p>
+                                <div class="flex gap-2">
+                                    <button onclick="checkMCQ('rmcq-9', 0, 0)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">Yes</button>
+                                    <button onclick="checkMCQ('rmcq-9', 1, 0)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">No</button>
+                                </div>
+                            </div>
+                            <!-- Q10 -->
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100" id="rmcq-10">
+                                <p class="font-medium text-slate-800 text-sm mb-2">10. Zinah thinks working women are important for the economy.</p>
+                                <div class="flex gap-2">
+                                    <button onclick="checkMCQ('rmcq-10', 0, 0)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">True</button>
+                                    <button onclick="checkMCQ('rmcq-10', 1, 0)" class="flex-1 bg-white hover:bg-slate-100 border border-slate-200 py-1 rounded text-xs transition">False</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Reading -->
+            <div class="instruction-box border-l-blue-500 bg-blue-50 mt-8">
+                <h4 class="text-blue-800"><i class="fa-solid fa-comments"></i> Activity 4: Local Businesses</h4>
+                <p>Think about businesses in your local area. Ask your partner:</p>
+                <ul class="mt-2 space-y-1 font-medium text-slate-700 list-disc list-inside">
+                    <li>Do you know any local business owners?</li>
+                    <li>What products or services do they sell?</li>
+                    <li>Are their products eco-friendly or popular?</li>
+                </ul>
+            </div>
+
+            <hr class="my-10 border-slate-200">
+
+            <div class="instruction-box">
+                <h4><i class="fa-solid fa-spell-check"></i> Activity 5: Vocabulary Match</h4>
+                <p>Match the bold words from the article and some new adjectives to their correct definitions. Select from the dropdown menus.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex flex-col gap-1 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="text-sm font-medium text-slate-700">1. Another word for a company or enterprise.</span>
+                        <select id="vm-1" class="border border-slate-300 rounded p-1.5 text-sm font-bold text-indigo-700 outline-none w-full"><option value="">---</option><option value="wrong">products</option><option value="correct">business</option><option value="wrong">unusual</option></select>
+                    </div>
+                    <div class="flex flex-col gap-1 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="text-sm font-medium text-slate-700">2. People who advertise and promote products.</span>
+                        <select id="vm-2" class="border border-slate-300 rounded p-1.5 text-sm font-bold text-indigo-700 outline-none w-full"><option value="">---</option><option value="wrong">employees</option><option value="correct">marketers</option><option value="wrong">engineers</option></select>
+                    </div>
+                    <div class="flex flex-col gap-1 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="text-sm font-medium text-slate-700">3. People who work for a company or a boss.</span>
+                        <select id="vm-3" class="border border-slate-300 rounded p-1.5 text-sm font-bold text-indigo-700 outline-none w-full"><option value="">---</option><option value="wrong">administrators</option><option value="correct">employees</option><option value="wrong">owners</option></select>
+                    </div>
+                    <div class="flex flex-col gap-1 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="text-sm font-medium text-slate-700">4. People who manage the paperwork of a business.</span>
+                        <select id="vm-4" class="border border-slate-300 rounded p-1.5 text-sm font-bold text-indigo-700 outline-none w-full"><option value="">---</option><option value="correct">administrators</option><option value="wrong">marketers</option><option value="wrong">products</option></select>
+                    </div>
+                    <div class="flex flex-col gap-1 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="text-sm font-medium text-slate-700">5. A person who has and runs their own company.</span>
+                        <select id="vm-5" class="border border-slate-300 rounded p-1.5 text-sm font-bold text-indigo-700 outline-none w-full"><option value="">---</option><option value="wrong">employee</option><option value="correct">business owner</option><option value="wrong">homemaker</option></select>
+                    </div>
+                    <div class="flex flex-col gap-1 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="text-sm font-medium text-slate-700">6. The physical things that a business makes and sells.</span>
+                        <select id="vm-6" class="border border-slate-300 rounded p-1.5 text-sm font-bold text-indigo-700 outline-none w-full"><option value="">---</option><option value="wrong">business</option><option value="wrong">popular</option><option value="correct">products</option></select>
+                    </div>
+                    <div class="flex flex-col gap-1 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="text-sm font-medium text-slate-700">7. Adjective: Doing very well and making good money.</span>
+                        <select id="vm-7" class="border border-slate-300 rounded p-1.5 text-sm font-bold text-indigo-700 outline-none w-full"><option value="">---</option><option value="wrong">unusual</option><option value="correct">successful</option><option value="wrong">eco-friendly</option></select>
+                    </div>
+                    <div class="flex flex-col gap-1 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="text-sm font-medium text-slate-700">8. Adjective: Not common; different from what usually happens.</span>
+                        <select id="vm-8" class="border border-slate-300 rounded p-1.5 text-sm font-bold text-indigo-700 outline-none w-full"><option value="">---</option><option value="wrong">successful</option><option value="wrong">popular</option><option value="correct">unusual</option></select>
+                    </div>
+                    <div class="flex flex-col gap-1 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="text-sm font-medium text-slate-700">9. Adjective: Liked by many people.</span>
+                        <select id="vm-9" class="border border-slate-300 rounded p-1.5 text-sm font-bold text-indigo-700 outline-none w-full"><option value="">---</option><option value="wrong">eco-friendly</option><option value="correct">popular</option><option value="wrong">unusual</option></select>
+                    </div>
+                    <div class="flex flex-col gap-1 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="text-sm font-medium text-slate-700">10. Adjective: Good for the environment and nature.</span>
+                        <select id="vm-10" class="border border-slate-300 rounded p-1.5 text-sm font-bold text-indigo-700 outline-none w-full"><option value="">---</option><option value="wrong">unusual</option><option value="wrong">successful</option><option value="correct">eco-friendly</option></select>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <button onclick="checkDropdowns(['vm-1', 'vm-2', 'vm-3', 'vm-4', 'vm-5', 'vm-6', 'vm-7', 'vm-8', 'vm-9', 'vm-10'], 'vm-feedback')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 px-8 rounded-full transition shadow-sm text-sm">Check Vocabulary</button>
+                    <p id="vm-feedback" class="mt-3 font-bold text-sm h-5"></p>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                 <button onclick="switchTab('tab-grammar')" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg transform hover:-translate-y-1">Next: Grammar Rules ⚙️ <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 4: GRAMMAR                             -->
+        <!-- ========================================== -->
+        <section id="tab-grammar" class="tab-content no-print">
+            <div class="transition-box border-l-purple-500 bg-purple-50">
+                <h4 class="text-purple-800"><i class="fa-solid fa-puzzle-piece"></i> Connecting Words</h4>
+                <p>We read about <em>a</em> business owner and <em>an</em> engineer. In English, we must use these tiny words (called articles) before jobs and singular nouns. Let's master the rules.</p>
+            </div>
+
+            <div class="instruction-box bg-white border-slate-200">
+                <h4 class="text-indigo-600"><i class="fa-solid fa-gears"></i> Grammar Rules: A, An, and No Article (X)</h4>
+                <ul class="text-base text-slate-700 space-y-2 mt-2">
+                    <li>Use <strong class="text-indigo-600">A</strong> before a singular noun that starts with a consonant sound (e.g., <em>a</em> teacher, <em>a</em> successful business).</li>
+                    <li>Use <strong class="text-emerald-600">An</strong> before a singular noun that starts with a vowel sound (e.g., <em>an</em> engineer, <em>an</em> office manager).</li>
+                    <li>Use <strong class="text-rose-600">No Article (X)</strong> if the noun is PLURAL (e.g., They are marketers) or for names of countries/cities (e.g., He is from Iraq).</li>
+                </ul>
+            </div>
+
+            <!-- Activity 1: Sentence Challenge -->
+            <div class="instruction-box">
+                <h4><i class="fa-solid fa-dumbbell"></i> Activity 1: The 15-Sentence Challenge</h4>
+                <p>Select <strong>a</strong>, <strong>an</strong>, or <strong>X</strong> (no article) from the dropdowns to complete the sentences.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">1.</span> Zinah is 
+                        <select id="ga-1" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="correct">a</option><option value="wrong">an</option><option value="wrong">X</option></select>
+                        business owner in Iraq.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">2.</span> My brother is 
+                        <select id="ga-2" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select>
+                        engineer, and he works in a large office.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">3.</span> I want to be 
+                        <select id="ga-3" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select>
+                        art teacher because I love painting.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">4.</span> They are 
+                        <select id="ga-4" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="wrong">a</option><option value="wrong">an</option><option value="correct">X</option></select>
+                        students at the local university.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">5.</span> She is 
+                        <select id="ga-5" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select>
+                        excellent manager, so her team is very happy.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">6.</span> We need 
+                        <select id="ga-6" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select>
+                        office manager for the new branch in the city.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">7.</span> Are you 
+                        <select id="ga-7" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="correct">a</option><option value="wrong">an</option><option value="wrong">X</option></select>
+                        doctor or a nurse?
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">8.</span> Mark and Jean are 
+                        <select id="ga-8" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="wrong">a</option><option value="wrong">an</option><option value="correct">X</option></select>
+                        marketers for a big technology company.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">9.</span> I have 
+                        <select id="ga-9" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="correct">a</option><option value="wrong">an</option><option value="wrong">X</option></select>
+                        busy life, but I really enjoy it.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">10.</span> My father is 
+                        <select id="ga-10" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select>
+                        architect, and he designs beautiful houses.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">11.</span> Do you have 
+                        <select id="ga-11" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="correct">a</option><option value="wrong">an</option><option value="wrong">X</option></select>
+                        degree in business administration?
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">12.</span> She has 
+                        <select id="ga-12" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select>
+                        unusual job; she tests video games.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">13.</span> He works as 
+                        <select id="ga-13" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select>
+                        interior designer in Paris.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">14.</span> Tacos are 
+                        <select id="ga-14" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="correct">a</option><option value="wrong">an</option><option value="wrong">X</option></select>
+                        popular food in Mexico.
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">15.</span> Zinah creates 
+                        <select id="ga-15" class="border border-slate-300 rounded p-1 text-sm font-bold text-indigo-700 outline-none"><option value="">---</option><option value="wrong">a</option><option value="wrong">an</option><option value="correct">X</option></select>
+                        eco-friendly products for her customers.
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <button onclick="checkDropdowns(['ga-1', 'ga-2', 'ga-3', 'ga-4', 'ga-5', 'ga-6', 'ga-7', 'ga-8', 'ga-9', 'ga-10', 'ga-11', 'ga-12', 'ga-13', 'ga-14', 'ga-15'], 'ga-feedback')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-8 rounded-full transition shadow-sm text-sm">Check Grammar ✅</button>
+                    <p id="ga-feedback" class="mt-3 font-bold text-sm h-5"></p>
+                </div>
+            </div>
+
+            <!-- Activity 2 & 3: Dialogues & Scripts -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+                <!-- Activity 2 -->
+                <div class="bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-700 text-white">
+                    <h4 class="text-amber-400 font-bold mb-4 border-b border-slate-600 pb-2"><i class="fa-solid fa-comments"></i> Activity 2: Workplace Dialogue</h4>
+                    <p class="text-sm text-slate-300 mb-6">Complete the conversation with a, an, or X.</p>
+                    
+                    <div class="space-y-4 text-sm font-nunito leading-relaxed">
+                        <p><strong class="text-indigo-300">Mark:</strong> Hi, Sarah. Are you <select id="d-1" class="text-indigo-900 font-bold p-1 rounded outline-none mx-1 text-xs"><option value="">--</option><option value="correct">a</option><option value="wrong">an</option><option value="wrong">X</option></select> new employee?</p>
+                        <p><strong class="text-emerald-300">Sarah:</strong> Yes, I am. I am <select id="d-2" class="text-indigo-900 font-bold p-1 rounded outline-none mx-1 text-xs"><option value="">--</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select> accountant.</p>
+                        <p><strong class="text-indigo-300">Mark:</strong> Nice! I am <select id="d-3" class="text-indigo-900 font-bold p-1 rounded outline-none mx-1 text-xs"><option value="">--</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select> office manager here. We have <select id="d-4" class="text-indigo-900 font-bold p-1 rounded outline-none mx-1 text-xs"><option value="">--</option><option value="wrong">a</option><option value="wrong">an</option><option value="correct">X</option></select> great products in this company.</p>
+                        <p><strong class="text-emerald-300">Sarah:</strong> I know. I have <select id="d-5" class="text-indigo-900 font-bold p-1 rounded outline-none mx-1 text-xs"><option value="">--</option><option value="correct">a</option><option value="wrong">an</option><option value="wrong">X</option></select> degree in finance, and I love working with numbers.</p>
+                        <p><strong class="text-indigo-300">Mark:</strong> Is your brother <select id="d-6" class="text-indigo-900 font-bold p-1 rounded outline-none mx-1 text-xs"><option value="">--</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select> accountant too?</p>
+                        <p><strong class="text-emerald-300">Sarah:</strong> No, my brother and sister are <select id="d-7" class="text-indigo-900 font-bold p-1 rounded outline-none mx-1 text-xs"><option value="">--</option><option value="wrong">a</option><option value="wrong">an</option><option value="correct">X</option></select> teachers. They work at <select id="d-8" class="text-indigo-900 font-bold p-1 rounded outline-none mx-1 text-xs"><option value="">--</option><option value="correct">a</option><option value="wrong">an</option><option value="wrong">X</option></select> university.</p>
+                        <p><strong class="text-indigo-300">Mark:</strong> That's cool. I think teaching is <select id="d-9" class="text-indigo-900 font-bold p-1 rounded outline-none mx-1 text-xs"><option value="">--</option><option value="wrong">a</option><option value="correct">an</option><option value="wrong">X</option></select> excellent profession.</p>
+                        <p><strong class="text-emerald-300">Sarah:</strong> Yes, they have <select id="d-10" class="text-indigo-900 font-bold p-1 rounded outline-none mx-1 text-xs"><option value="">--</option><option value="wrong">a</option><option value="wrong">an</option><option value="correct">X</option></select> happy lives.</p>
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <button onclick="checkDropdowns(['d-1','d-2','d-3','d-4','d-5','d-6','d-7','d-8','d-9','d-10'], 'd-feedback')" class="bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-2 px-6 rounded-full transition shadow-sm text-sm">Check Dialogue</button>
+                        <p id="d-feedback" class="font-bold text-sm h-5"></p>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="bg-emerald-50 p-6 rounded-2xl shadow-sm border border-emerald-200">
+                    <h4 class="text-emerald-800 font-bold mb-4 border-b border-emerald-200 pb-2"><i class="fa-solid fa-pen-nib"></i> Activity 3: "About My Family"</h4>
+                    <p class="text-sm text-slate-700 mb-6">Write a short paragraph about your family's jobs. Be sure to use A, An, or plural nouns correctly.</p>
+                    
+                    <textarea class="w-full h-48 bg-white border border-emerald-300 rounded-xl p-4 text-slate-700 font-nunito leading-relaxed outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition resize-none" placeholder="My name is... I am a [job]. My mother is a/an [job]. My brothers are [job - plural]..."></textarea>
+                    
+                    <div class="mt-4 text-xs text-slate-500 text-center font-bold">
+                        Read your paragraph to your partner when you are finished!
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                 <button onclick="switchTab('tab-speaking')" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg transform hover:-translate-y-1">Next: Speaking Mission 🗣️ <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 5: SPEAKING                            -->
+        <!-- ========================================== -->
+        <section id="tab-speaking" class="tab-content no-print">
+            <div class="transition-box border-l-rose-500 bg-rose-50">
+                <h4 class="text-rose-800"><i class="fa-solid fa-microphone-lines"></i> Time to Speak!</h4>
+                <p>Now let's put it all together! You know how to ask questions and use articles for jobs. We are going to practice pronunciation and then play a guessing game.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+                
+                <!-- Pronunciation (Span 4) -->
+                <div class="lg:col-span-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-volume-high text-indigo-500"></i> Pronunciation</h3>
+                    <p class="text-sm text-slate-600 mb-4">Listen to your teacher and repeat. Connect the words smoothly!</p>
+                    
+                    <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-100 flex-grow flex items-center justify-center">
+                        <ul class="text-xl font-black text-indigo-800 space-y-4 font-poppins text-center">
+                            <li>an<span class="text-amber-500">‿</span>architect</li>
+                            <li>an<span class="text-amber-500">‿</span>art teacher</li>
+                            <li>an<span class="text-amber-500">‿</span>economist</li>
+                            <li>an<span class="text-amber-500">‿</span>engineer</li>
+                            <li>an<span class="text-amber-500">‿</span>interior designer</li>
+                            <li>an<span class="text-amber-500">‿</span>office manager</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Group Mission (Span 8) -->
+                <div class="lg:col-span-8 bg-slate-900 text-white p-6 md:p-8 rounded-2xl shadow-xl relative overflow-hidden flex flex-col">
+                    <div class="absolute -right-10 -bottom-10 text-9xl opacity-10 pointer-events-none">🕵️</div>
+                    
+                    <h3 class="text-2xl font-bold text-amber-400 mb-4 flex items-center gap-3 relative z-10">
+                        <i class="fa-solid fa-user-secret"></i> Group Mission: Who is it?
+                    </h3>
+                    <p class="text-slate-300 mb-6 relative z-10 text-lg">Work in groups of 3 or 4. Follow the steps to play the guessing game.</p>
+                    
+                    <div class="relative z-10 space-y-4 mb-6">
+                        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                            <span class="text-amber-400 font-bold uppercase text-xs tracking-wider">Step 1</span>
+                            <p class="text-sm mt-1">Student A thinks of a famous person (business owner, singer, actor, athlete).</p>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                            <span class="text-amber-400 font-bold uppercase text-xs tracking-wider">Step 2</span>
+                            <p class="text-sm mt-1">The group must ask <strong>Yes/No questions</strong> to find clues about the person.</p>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                            <span class="text-amber-400 font-bold uppercase text-xs tracking-wider">Step 3</span>
+                            <p class="text-sm mt-1">When you think you know, ask "Is it [Name]?" If you are right, you get a point!</p>
+                        </div>
+                    </div>
+
+                    <details class="relative z-10 bg-indigo-900/50 rounded-xl border border-indigo-500/50 cursor-pointer group">
+                        <summary class="p-4 font-bold text-indigo-200 group-hover:text-white transition outline-none">👀 Show Example Conversation</summary>
+                        <div class="p-4 pt-0 text-sm font-nunito leading-relaxed space-y-2 border-t border-indigo-500/30 mt-2">
+                            <p><strong class="text-amber-400">Student A:</strong> Okay, I am thinking of a famous person.</p>
+                            <p><strong class="text-blue-300">Student B:</strong> Are they a man or a woman?</p>
+                            <p><strong class="text-amber-400">Student A:</strong> A woman.</p>
+                            <p><strong class="text-emerald-300">Student C:</strong> Is she an actor?</p>
+                            <p><strong class="text-amber-400">Student A:</strong> No, she is a singer and a business owner.</p>
+                            <p><strong class="text-blue-300">Student B:</strong> Is she from the US?</p>
+                            <p><strong class="text-amber-400">Student A:</strong> No, she is from Colombia.</p>
+                            <p><strong class="text-emerald-300">Student C:</strong> Is it Shakira?</p>
+                            <p><strong class="text-amber-400">Student A:</strong> Yes, it is!</p>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-10">
+                 <button onclick="switchTab('tab-wrapup')" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg transform hover:-translate-y-1">Next: The Weekend Vault 🎮 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 6: WRAP-UP GAME                        -->
+        <!-- ========================================== -->
+        <section id="tab-wrapup" class="tab-content no-print">
+            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl text-white relative overflow-hidden text-center min-h-[600px] flex flex-col justify-center border-4 border-slate-700">
+                <!-- Safe/Vault Background effect -->
+                <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: repeating-radial-gradient(circle at 50% 50%, #475569, #475569 10px, transparent 10px, transparent 20px);"></div>
+                
+                <div id="vault-intro" class="relative z-10 transition-all duration-500">
+                    <div class="w-32 h-32 bg-slate-800 rounded-full flex items-center justify-center text-6xl mx-auto mb-6 border-8 border-slate-600 shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+                        🔐
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black font-poppins text-slate-300 mb-4 tracking-wider">THE WEEKEND VAULT</h2>
+                    <p class="text-slate-400 max-w-lg mx-auto mb-8 text-lg">Class is almost over! But to start your weekend, you must unlock the vault by answering 10 rapid-fire questions about today's lesson.</p>
+                    <button onclick="startVaultGame()" class="bg-slate-700 hover:bg-slate-600 text-white font-black text-xl px-12 py-4 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.1)] transform hover:scale-105 transition-all uppercase tracking-widest border-2 border-slate-500">Unlock the Vault</button>
+                </div>
+
+                <div id="vault-game" class="relative z-10 hidden transition-all duration-500 w-full max-w-2xl mx-auto">
+                    <div class="flex justify-between items-center mb-6 border-b border-slate-700 pb-4">
+                        <span class="text-slate-400 font-bold tracking-widest uppercase text-sm">Security Pin: <span id="vault-level" class="text-amber-400">1/10</span></span>
+                        <div class="flex gap-2" id="vault-progress-dots">
+                            <!-- JS injected dots -->
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 p-8 rounded-2xl border-2 border-slate-600 mb-8 min-h-[150px] flex items-center justify-center shadow-inner">
+                        <h3 id="vault-question" class="text-2xl md:text-3xl font-bold text-white leading-tight font-poppins">Loading...</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="vault-options">
+                        <!-- JS injected options -->
+                    </div>
+                </div>
+
+                <div id="vault-success" class="relative z-10 hidden transition-all duration-500 w-full max-w-2xl mx-auto">
+                    <div class="w-32 h-32 bg-amber-500/20 rounded-full flex items-center justify-center text-7xl mx-auto mb-6 border-4 border-amber-400 shadow-[0_0_40px_rgba(251,191,36,0.6)]">
+                        🔓
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black font-poppins text-amber-400 mb-2">VAULT OPENED!</h2>
+                    <h3 class="text-2xl text-white font-bold mb-6">Enjoy your weekend!</h3>
+                    <p class="text-slate-300 mb-8 text-lg">Amazing job today. You mastered the vocabulary, the grammar, and the speaking activities.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- TOAST CONTAINER -->
+    <div id="toast" class="toast no-print"></div>
+
+    <script>
+        // Tab Navigation Logic
+        function switchTab(tabId) {
+            try {
+                document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+                const tabs = ['tab-warmup', 'tab-video', 'tab-reading', 'tab-grammar', 'tab-speaking', 'tab-wrapup'];
+                
+                tabs.forEach(id => {
+                    const btn = document.getElementById(`btn-${id}`);
+                    if (btn) btn.className = "px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-500 hover:bg-slate-100 whitespace-nowrap";
+                });
+                
+                const target = document.getElementById(tabId);
+                if (target) target.classList.add('active');
+                
+                const activeBtn = document.getElementById(`btn-${tabId}`);
+                if (activeBtn) activeBtn.className = "px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 bg-slate-800 text-white shadow-md whitespace-nowrap";
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } catch (e) { console.error('switchTab error:', e); }
+        }
+
+        function showToast(msg, type = 'success') {
+            try {
+                const toast = document.getElementById('toast');
+                toast.textContent = msg;
+                toast.className = `toast toast-${type} show`;
+                setTimeout(() => toast.classList.remove('show'), 3000);
+            } catch (e) { console.error(e); }
+        }
+
+        // ==========================================
+        // ACTIVITY 1: The Sorter Game
+        // ==========================================
+        const sortActivities = [
+            { text: "Write emails", type: "work" },
+            { text: "Watch Netflix", type: "me" },
+            { text: "Eat dinner with parents", type: "family" },
+            { text: "Study for a test", type: "work" },
+            { text: "Go to the gym", type: "me" },
+            { text: "Help kids with homework", type: "family" },
+            { text: "Attend a meeting", type: "work" },
+            { text: "Hang out with friends", type: "family" },
+            { text: "Read a book", type: "me" },
+            { text: "Do a presentation", type: "work" },
+            { text: "Call mom", type: "family" },
+            { text: "Play soccer", type: "me" },
+            { text: "Clean the house", type: "family" },
+            { text: "Take an English class", type: "work" },
+            { text: "Go to the movies", type: "me" }
+        ];
+        let currentSortIndex = 0;
+
+        function initSorterGame() {
+            if (sortActivities.length > 0) {
+                sortActivities.sort(() => Math.random() - 0.5); // Shuffle
+                document.getElementById('sort-word').textContent = sortActivities[0].text;
+                document.getElementById('sort-counter').textContent = `1 / ${sortActivities.length}`;
+            }
+        }
+
+        function checkSort(guessType) {
+            try {
+                if (currentSortIndex >= sortActivities.length) return;
+
+                const currentObj = sortActivities[currentSortIndex];
+                const isCorrect = (currentObj.type === guessType);
+
+                if (isCorrect) {
+                    showToast('✅ Correct Category!', 'success');
+                    
+                    const card = document.getElementById('sorter-card');
+                    card.classList.add('bg-green-100', 'border-green-400');
+                    setTimeout(() => card.classList.remove('bg-green-100', 'border-green-400'), 300);
+
+                    currentSortIndex++;
+                    
+                    if (currentSortIndex < sortActivities.length) {
+                        document.getElementById('sort-word').textContent = sortActivities[currentSortIndex].text;
+                        document.getElementById('sort-counter').textContent = `${currentSortIndex + 1} / ${sortActivities.length}`;
+                    } else {
+                        document.getElementById('sort-word').textContent = "🎉 Finished! You unlocked Part 2.";
+                        document.getElementById('sort-word').classList.add('text-emerald-600');
+                        document.getElementById('sort-counter').style.display = 'none';
+                        document.getElementById('sorter-buttons').style.display = 'none';
+                        document.getElementById('production-phase').classList.remove('hidden');
+                    }
+                } else {
+                    showToast('❌ Try another category.', 'error');
+                    const wordEl = document.getElementById('sort-word');
+                    wordEl.classList.add('text-red-500');
+                    setTimeout(() => wordEl.classList.remove('text-red-500'), 400);
+                }
+            } catch (e) {
+                console.error("Sorting game error:", e);
+            }
+        }
+
+        // ==========================================
+        // REUSABLE CHECKERS (MCQ, Dropdowns, Inputs)
+        // ==========================================
+        let answeredQuestions = new Set(); 
+
+        function checkMCQ(containerId, guessIndex, correctIndex) {
+            if (answeredQuestions.has(containerId)) return;
+            const container = document.getElementById(containerId);
+            const buttons = container.querySelectorAll('button');
+            
+            if (guessIndex === correctIndex) {
+                buttons[guessIndex].classList.add('correct-highlight');
+                showToast('✅ Correct!', 'success');
+                answeredQuestions.add(containerId);
+            } else {
+                buttons[guessIndex].classList.add('wrong-highlight');
+                showToast('❌ Not quite. Try again.', 'error');
+                setTimeout(() => { buttons[guessIndex].classList.remove('wrong-highlight'); }, 1000);
+            }
+        }
+
+        function checkDropdowns(idsArray, sectionId) {
+            let allCorrect = true;
+            idsArray.forEach(id => {
+                const select = document.getElementById(id);
+                if (!select) return;
+                
+                if (select.value === 'correct') {
+                    select.classList.remove('border-slate-300', 'border-red-400');
+                    select.classList.add('border-green-400', 'bg-green-50', 'text-green-700');
+                } else {
+                    allCorrect = false;
+                    if (select.value !== "") {
+                        select.classList.remove('border-slate-300');
+                        select.classList.add('border-red-400', 'bg-red-50', 'text-red-700');
+                    }
+                }
+            });
+
+            const feedback = document.getElementById(sectionId);
+            if (allCorrect) {
+                if (feedback) { feedback.textContent = "✅ All correct!"; feedback.className = "mt-3 font-bold h-5 text-sm text-green-600"; }
+                showToast("✅ Well done!", "success");
+            } else {
+                if (feedback) { feedback.textContent = "❌ Some answers are incorrect. Try again!"; feedback.className = "mt-3 font-bold h-5 text-sm text-red-500"; }
+                showToast("❌ Check your answers.", "error");
+            }
+        }
+
+        // ==========================================
+        // WRAP UP: THE VAULT GAME
+        // ==========================================
+        const vaultData = [
+            { q: "What does a business owner do?", o: ["Manages the paperwork.", "Runs their own company.", "Works for a boss."], a: 1 },
+            { q: "Which word starts with a VOWEL sound?", o: ["University", "Engineer", "Marketer"], a: 1 },
+            { q: "Choose the correct sentence:", o: ["She is a architect.", "She is an architect.", "She is architect."], a: 1 },
+            { q: "What does 'eco-friendly' mean?", o: ["Good for the environment.", "Very popular.", "Unusual."], a: 0 },
+            { q: "Choose the correct sentence:", o: ["We are an marketers.", "We are a marketers.", "We are marketers."], a: 2 },
+            { q: "Max has a job from nine to five. He thinks balance is:", o: ["Impossible", "Not very hard", "Crazy"], a: 1 },
+            { q: "Zinah's employees are all:", o: ["Men", "Women", "Engineers"], a: 1 },
+            { q: "How do you ask about marital status?", o: ["Is he married?", "Are he married?", "Does he married?"], a: 0 },
+            { q: "Which job is NOT mentioned as having 'long hours' in the vlog?", o: ["Pilot", "Journalist", "Photographer"], a: 2 },
+            { q: "If you don't know the answer, you say:", o: ["I don't think so.", "I don't know.", "I think so."], a: 1 }
+        ];
+        let currentVault = 0;
+
+        function startVaultGame() {
+            document.getElementById('vault-intro').classList.add('hidden');
+            document.getElementById('vault-game').classList.remove('hidden');
+            currentVault = 0;
+            renderVaultDots();
+            renderVaultQ();
+        }
+
+        function renderVaultDots() {
+            const container = document.getElementById('vault-progress-dots');
+            container.innerHTML = '';
+            for(let i=0; i<10; i++) {
+                let color = i < currentVault ? 'bg-amber-400' : 'bg-slate-600';
+                container.innerHTML += `<div class="w-2 h-2 rounded-full ${color}"></div>`;
+            }
+        }
+
+        function renderVaultQ() {
+            if (currentVault >= vaultData.length) {
+                document.getElementById('vault-game').classList.add('hidden');
+                document.getElementById('vault-success').classList.remove('hidden');
+                return;
+            }
+
+            const data = vaultData[currentVault];
+            document.getElementById('vault-level').textContent = `${currentVault + 1}/10`;
+            document.getElementById('vault-question').textContent = data.q;
+
+            const opts = document.getElementById('vault-options');
+            opts.innerHTML = '';
+            
+            data.o.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "bg-slate-700 hover:bg-slate-600 text-white font-bold py-4 px-6 rounded-xl border border-slate-500 hover:border-amber-400 transition text-lg w-full vault-opt-btn";
+                btn.textContent = opt;
+                btn.onclick = () => checkVault(idx, data.a, btn);
+                opts.appendChild(btn);
+            });
+            renderVaultDots();
+        }
+
+        function checkVault(guess, correct, btn) {
+            const allBtns = document.querySelectorAll('.vault-opt-btn');
+            allBtns.forEach(b => b.disabled = true);
+
+            if (guess === correct) {
+                btn.classList.replace('bg-slate-700', 'bg-green-600');
+                btn.classList.replace('border-slate-500', 'border-green-400');
+                setTimeout(() => {
+                    currentVault++;
+                    renderVaultQ();
+                }, 600);
+            } else {
+                btn.classList.replace('bg-slate-700', 'bg-red-600');
+                btn.classList.replace('border-slate-500', 'border-red-400');
+                
+                // Show correct one
+                allBtns[correct].classList.replace('bg-slate-700', 'bg-green-600');
+                allBtns[correct].classList.replace('border-slate-500', 'border-green-400');
+                
+                showToast("Alarm Triggered! Restarting sequence...", "error");
+                
+                // Restart sequence
+                setTimeout(() => {
+                    currentVault = 0;
+                    renderVaultQ();
+                }, 1500);
+            }
+        }
+
+        // ==========================================
+        // INITIALIZATION
+        // ==========================================
+        window.onload = function() {
+            try { initSorterGame(); } catch (e) { console.error('Sorter error:', e); }
+            switchTab('tab-warmup');
+        };
+    </script>
+</body>
+</html>
